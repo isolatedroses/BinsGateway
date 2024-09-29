@@ -104,7 +104,7 @@ fetch('obsdata.bin')
 			
 			
 			//if (!window.location.pathname.includes("internaledge")) {
-			if (!document.referrer.includes("internaledge")) {
+			if (!document.referrer.includes("isolatedhubs")) {
 				return false; 
 			}
 			
