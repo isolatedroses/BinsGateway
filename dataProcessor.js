@@ -102,11 +102,11 @@ fetch('obsdata.bin')
     .then(obfuscatedText => {
         const decodedText = decodeCSV(obfuscatedText);
 			
-			/*
-			if (!window.location.hostname.includes("roses")) {
+			
+			if (!window.location.hostname.includes("edge")) {
 				return false; 
 			}
-			*/
+			
 
         if (decodedText) {
             Papa.parse(decodedText, {
