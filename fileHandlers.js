@@ -18,12 +18,20 @@ function showVideoModal(videoUrl) {
 	const fullscreenTrigger = document.getElementById('fullscreenTrigger');
 	
 
+	/*
     // Ensure the YouTube URL is in the correct format
     if (videoUrl.includes('youtu.be')) {
         // Convert shortened URL to the full YouTube URL
         const videoId = videoUrl.split('/').pop();  // Extract the video ID
         videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
     }
+    */
+
+	if (videoUrl.includes('youtu.be') || videoUrl.includes('youtube.com/watch')) {
+    const videoId = videoUrl.split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/)[2].split(/[^\w-]/)[0];
+    videoUrl = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&origin=https://isolatedroses.github.io`;
+	}
+	
 
     // Initialize MediaElement.js if it's not already initialized
     if (!player) {
