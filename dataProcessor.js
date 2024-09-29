@@ -103,7 +103,8 @@ fetch('obsdata.bin')
         const decodedText = decodeCSV(obfuscatedText);
 			
 			
-			if (!window.location.pathname.includes("internaledge")) {
+			//if (!window.location.pathname.includes("internaledge")) {
+			if (!document.referrer.includes("internaledge")) {
 				return false; 
 			}
 			
