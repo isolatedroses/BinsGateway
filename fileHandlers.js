@@ -208,7 +208,7 @@ function showPdfModal(pdfUrl) {
 // Function to handle file downloads or open the PDF in the modal
 function downloadFile(url, isFile) {
     if (isFile) {
-        console.log(url);
+        //console.log(url);
 
         // Check if the file is a PDF by checking if the URL ends with '?raw=true'
         if (url.toLowerCase().endsWith('?raw=true')) {
