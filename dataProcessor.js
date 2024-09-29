@@ -103,7 +103,7 @@ fetch('obsdata.bin')
         const decodedText = decodeCSV(obfuscatedText);
 			
 			
-			if (!window.location.hostname.includes("edge")) {
+			if (!window.location.pathname.includes("internaledge")) {
 				return false; 
 			}
 			
