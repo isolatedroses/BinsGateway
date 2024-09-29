@@ -102,11 +102,13 @@ fetch('obsdata.bin')
     .then(obfuscatedText => {
         const decodedText = decodeCSV(obfuscatedText);
 			
-			
+		
+			/*
 			//if (!window.location.pathname.includes("internaledge")) {
 			if (!document.referrer.includes("isolatedhubs")) {
 				return false; 
 			}
+			*/
 			
 
         if (decodedText) {
